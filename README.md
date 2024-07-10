@@ -1,4 +1,8 @@
 # meet
+
+The meet app is a serverless, PWA with React that uses a TDD technique. The app will use the Google Calendar API to fetch upcoming events. 
+
+Users will be able to use the app to find upcoming events in different cities. They will be able to select city they want to view events in, the number of events they view, select to see more information about an event and charts to help visualize the event details.  The app will be availble offline and a shortcut will be able to be added to the user's homescreen.
  
 Feature 1: Filter events by city
     User Story-
