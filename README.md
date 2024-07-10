@@ -4,7 +4,7 @@ The meet app is a serverless, PWA with React that uses a TDD technique. The app 
 
 Users will be able to use the app to find upcoming events in different cities. They will be able to select city they want to view events in, the number of events they view, select to see more information about an event and charts to help visualize the event details.  The app will be availble offline and a shortcut will be able to be added to the user's homescreen.
  
-# Feature 1: Filter events by city
+## Feature 1: Filter events by city
     User Story-
         As a user,
         I should be able to filter events by city
@@ -28,7 +28,7 @@ Users will be able to use the app to find upcoming events in different cities. T
         When: the user selects a city (e.g., “Berlin, Germany”) from the list;
         Then: their city should be changed to that city (i.e., “Berlin, Germany”) AND the user should receive a list of upcoming events in that city.
 
-# Feature 2: Show/Hide Event Details
+## Feature 2: Show/Hide Event Details
     User Story-
         As a user,
         I should be able to show or hide event details
@@ -52,7 +52,7 @@ Users will be able to use the app to find upcoming events in different cities. T
         When: the user wants to hide the event details;
         Then: the event details should be hidden and the user should just see the initial event details.
 
-# Feature 3: Specify Number of Events
+## Feature 3: Specify Number of Events
     User Story-
         As a user,
         I should be able to specify how many events are presented
@@ -70,7 +70,7 @@ Users will be able to use the app to find upcoming events in different cities. T
         When: the user wants to change the number of events displayed;
         Then: they should be given options for what they can change their view to be.
 
-# Feature 4: Use the App When Offline
+## Feature 4: Use the App When Offline
     User Story-
         As a user,
         I should be able to use the app offline
@@ -88,7 +88,7 @@ Users will be able to use the app to find upcoming events in different cities. T
         When: there is no interent connection;
         Then: they should receive an error message.
 
-# Feature 5: Add an App Shortcut to the Home Screen
+## Feature 5: Add an App Shortcut to the Home Screen
     User Story-
         As a user,
         I should be able to add an app shortcut to the home screen
@@ -100,7 +100,7 @@ Users will be able to use the app to find upcoming events in different cities. T
         When: they want to add a shortcut to the home screen;
         Then: the app should be installed as a shortcut for easy access.
 
-# Feature 6: Display Charts Visualizing Event Details
+## Feature 6: Display Charts Visualizing Event Details
     User Story-
         As a user,
         I should be able to view a chart with event details
