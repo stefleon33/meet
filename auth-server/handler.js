@@ -114,4 +114,4 @@ module.exports.getCalendarEvents = async(event) => {
       body: JSON.stringify(error),
     };
   });
-}
+};
