@@ -1,9 +1,12 @@
+// src/App.js
+
+import EventList from './components/EventList';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-     
+      <EventList />
     </div>
   );
 }
