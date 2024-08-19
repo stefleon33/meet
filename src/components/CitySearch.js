@@ -1,5 +1,7 @@
 // src/components/CitySearch.js
 
+import { useState } from "react";
+
 const CitySearch = () => {
     return (
       <div id="city-search" data-testid="city-search">
