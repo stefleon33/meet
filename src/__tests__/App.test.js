@@ -9,8 +9,8 @@ describe('<App /> component', () => {
         const AppDOM = render(<App />).container.firstChild;
         expect(AppDOM.querySelector('#event-list')).toBeInTheDocument();
       });
-      test('render CitySearch', () => {
+    test('render CitySearch', () => {
         const AppDOM = render().container.firstChild;
         expect(AppDOM.querySelector('#city-search')).toBeInTheDocument();
-        });
+    });
 });
