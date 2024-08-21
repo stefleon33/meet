@@ -17,9 +17,19 @@ const Event = ({event}) => {
             <a href={event.htmlLink}>See details</a>
           </div>
         ) : null}
+        <button
+          id="show-details-btn"
+          className="details-btn"
+          name="Show Details"
+          onClick={() => setShowDetails(!showDetails)}
+        >
+          {showDetails ? 'Hide Details' : 'Show Details'}
+        </button>
       </li>
     );
   }
   
   export default Event;
+  
+
   
