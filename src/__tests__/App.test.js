@@ -1,4 +1,5 @@
 /* eslint-disable testing-library/no-node-access */
+/* eslint-disable testing-library/no-render-in-setup */
 // src/__tests__/App.test.js
 
 import { render } from '@testing-library/react';
