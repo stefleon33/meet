@@ -1,10 +1,11 @@
 # meet
 
-The meet app is a serverless, PWA with React that uses a TDD technique. The app will use the Google Calendar API to fetch upcoming events. 
+The meet app is a serverless, PWA with React that uses a TDD technique. The app will use the Google Calendar API to fetch upcoming events.
 
-Users will be able to use the app to find upcoming events in different cities. They will be able to select city they want to view events in, the number of events they view, select to see more information about an event and charts to help visualize the event details.  The app will be availble offline and a shortcut will be able to be added to the user's homescreen.
- 
+Users will be able to use the app to find upcoming events in different cities. They will be able to select city they want to view events in, the number of events they view, select to see more information about an event and charts to help visualize the event details. The app will be availble offline and a shortcut will be able to be added to the user's homescreen.
+
 ## Feature 1: Filter events by city
+
     User Story-
         As a user,
         I should be able to filter events by city
@@ -29,21 +30,22 @@ Users will be able to use the app to find upcoming events in different cities. T
         Then: their city should be changed to that city (i.e., “Berlin, Germany”) AND the user should receive a list of upcoming events in that city.
 
 ## Feature 2: Show/Hide Event Details
+
     User Story-
         As a user,
         I should be able to show or hide event details
         So that I can see more information about selected events.
-        
+
     SCENARIO 1: An event element is collapsed by default.
 
         Given: user sees all events for a city;
         When: the user selects an event from the list;
         Then: the event details should be displayed.
 
-    SCENARIO 2: User can expand an event to seee details.
+    SCENARIO 2: User can expand an event to see details.
 
         Given: user is on an event;
-        When: user clicks a button to view more stails for the event;
+        When: user clicks a button to view more details for the event;
         Then: more information should be displayed for the event.
 
     SCENARIO 3: User can collapse an event to hide details.
@@ -53,11 +55,12 @@ Users will be able to use the app to find upcoming events in different cities. T
         Then: the event details should be hidden and the user should just see the initial event details.
 
 ## Feature 3: Specify Number of Events
+
     User Story-
         As a user,
         I should be able to specify how many events are presented
         So that I can see more or less events.
-        
+
     SCENARIO 1: When user hasn't specified a number, 32 events are shown by default.
 
         Given: the user has selected a city;
@@ -71,11 +74,12 @@ Users will be able to use the app to find upcoming events in different cities. T
         Then: they should be given options for what they can change their view to be.
 
 ## Feature 4: Use the App When Offline
+
     User Story-
         As a user,
         I should be able to use the app offline
         So that the app is always available.
-        
+
     SCENARIO 1: Show caches data when there's no internet connection.
 
         Given: the user has used the app before;
@@ -89,25 +93,27 @@ Users will be able to use the app to find upcoming events in different cities. T
         Then: they should receive an error message.
 
 ## Feature 5: Add an App Shortcut to the Home Screen
+
     User Story-
         As a user,
         I should be able to add an app shortcut to the home screen
         So that I can access the app from the home screen.
-        
-    SCENARIO 1: 
+
+    SCENARIO 1:
 
         Given: the user is on the app;
         When: they want to add a shortcut to the home screen;
         Then: the app should be installed as a shortcut for easy access.
 
 ## Feature 6: Display Charts Visualizing Event Details
+
     User Story-
         As a user,
         I should be able to view a chart with event details
         So that I can visualize the event details.
-        
+
     SCENARIO 1: Show a chart with the number of upcoming events in each city.
 
         Given: a user is viewing the events page;
         When: they navigate to the chart section;
-        Then: they should view a chart with the number of upcoming events in each city. 
+        Then: they should view a chart with the number of upcoming events in each city.
