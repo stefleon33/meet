@@ -38,7 +38,7 @@ describe('<Event /> component', () => {
         expect(EventComponent.queryByText('Show Details')).toBeInTheDocument();
       });
 
-      test('User clicks ("Show Dtails") button to see information', async () => {
+      test('User clicks ("Show Details") button to see information', async () => {
         const user = userEvent.setup();
         const button = EventComponent.queryByText('Show Details');
         await user.click(button);
