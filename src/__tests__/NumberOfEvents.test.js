@@ -2,6 +2,8 @@
 /* eslint-disable testing-library/no-render-in-setup */
 import { render } from "@testing-library/react";
 import NumberOfEvents from "../components/NumberOfEvents";
+import userEvent from "@testing-library/user-event";
+import { getEvents } from "../api";
 
 describe('<NumberOfEvents /> component', () => {
     let NumberOfEventsComponent;
