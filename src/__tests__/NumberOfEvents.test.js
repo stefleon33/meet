@@ -8,3 +8,8 @@ describe('<NumberOfEvents /> component', () => {
     beforeEach(() => {
         NumberOfEventsComponent = render(<NumberOfEvents setCurrentNOE={() => {}} setErrorAlert={() => {}} />)
     })
+
+    test('number of events has the role of textbox', () => {
+        const input = NumberOfEventsComponent.queryByRole('textbox');
+        expect(input).toBeInTheDocument();
+    });
