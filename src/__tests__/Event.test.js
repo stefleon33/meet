@@ -15,3 +15,8 @@ import '@testing-library/jest-dom/extend-expect';
         expect(EventComponent).toBeTruthy();
       });
 
+      test('event details are hidden by default', () => {
+        const eventsDetails = EventComponent.container.querySelector('.details');
+        expect(eventsDetails).not.toBeInTheDocument();
+      });
+
