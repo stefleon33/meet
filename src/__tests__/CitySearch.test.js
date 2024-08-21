@@ -1,8 +1,12 @@
+/* eslint-disable testing-library/prefer-screen-queries */
+/* eslint-disable testing-library/no-render-in-setup */
 // src/__tests__/CitySearch.test.js
 
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import '@testing-library/jest-dom/extend-expect';
 import CitySearch from '../components/CitySearch';
+import { extractLocations, getEvents } from '../api';
 
 describe('<CitySearch /> component', () => {
   let CitySearchComponent;
@@ -49,5 +53,21 @@ describe('<CitySearch /> component', () => {
     for (let i = 0; i < suggestions.length; i += 1) {
       expect(suggestionListItems[i].textContent).toBe(suggestions[i]);
     }
+  });
+  test('renders the suggestion text in the textbox upon clicking on the suggestion', async () => {
+    const user = userEvent.setup();
+    const allEvents = await getEvents(); 
+    const allLocations = extractLocations(allEvents);
+    CitySearchComponent.rerender(<CitySearch allLocations={allLocations} />);
+
+    const cityTextBox = CitySearchComponent.queryByRole('textbox');
+    await user.type(cityTextBox, "Berlin");
+
+    // the suggestion's textContent look like this: "Berlin, Germany"
+    const BerlinGermanySuggestion = CitySearchComponent.queryAllByRole('listitem')[0];
+
+    await user.click(BerlinGermanySuggestion);
+
+    expect(cityTextBox).toHaveValue(BerlinGermanySuggestion.textContent);
   });
 });
