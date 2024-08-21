@@ -17,4 +17,14 @@ describe('<NumberOfEvents /> component', () => {
     test('default number of events is 32', ( )=> {
         expect(NumberOfEventsComponent.getByRole('textbox')).toHaveValue('32');
     });
-    
+
+    test('textbox value changes when a user types', async () => {
+        const numberOfEvents =NumberOfEventsComponent.getByRole('textbox');
+        const user = userEvent.setup();
+        await user.type(numberOfEvents, '{backspace}{backspace}10');
+
+        const allEvents = await getEvents();
+        NumberOfEventsComponent.rerender(<NumberOfEvents setCurrentNOE={allEvents} setErrorAlert={() => {}} />)
+        expect(numberOfEvents).toHaveValue('10');
+    })
+});
