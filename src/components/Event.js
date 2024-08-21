@@ -9,7 +9,7 @@ const Event = ({event}) => {
         <span className="eventSummary">
           <h2>{event.summary}</h2>
           <p className="location">{event.location}</p>
-          <p className="originalStartTime">{event && (new Date(event.originalStartTime.dateTime)).toUTCString()}</p>
+          <p className="originalStartTime">{event.created}</p>
         </span>
         {showDetails ? (
           <div className="details" id="details">
