@@ -10,6 +10,12 @@ import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 //import userEvent from '@testing-library/user-event';
 
+describe('<Event /> component', () => {
+    let EventComponent;
+    const event = mockData[0];
+    beforeEach(() => {
+      EventComponent = render(<Event event={event}/>);
+    })
 
       test('render event component', () => { 
         expect(EventComponent).toBeTruthy();
