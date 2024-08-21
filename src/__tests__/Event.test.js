@@ -20,3 +20,7 @@ import '@testing-library/jest-dom/extend-expect';
         expect(eventsDetails).not.toBeInTheDocument();
       });
 
+      test('renders event title', () => {
+        expect(EventComponent.queryByText(mockData[0].summary)).toBeInTheDocument();
+      });
+
