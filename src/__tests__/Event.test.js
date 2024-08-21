@@ -8,7 +8,7 @@ import Event from '../components/Event';
 import mockData from "../mock-data";
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-//import userEvent from '@testing-library/user-event';
+import userEvent from '@testing-library/user-event';
 
 describe('<Event /> component', () => {
     let EventComponent;
@@ -32,7 +32,7 @@ describe('<Event /> component', () => {
 
       test('renders event location', () => {
         expect(EventComponent.queryByText(mockData[0].location)).toBeInTheDocument();
-      });
+      });     
 
       test('render events details button with title ("Show details")', () => {
         expect(EventComponent.queryByText('Show Details')).toBeInTheDocument();
