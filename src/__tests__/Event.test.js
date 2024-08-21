@@ -34,3 +34,9 @@ describe('<Event /> component', () => {
         expect(EventComponent.queryByText(mockData[0].location)).toBeInTheDocument();
       });
 
+      test('render events details button with title ("Show details")', () => {
+        expect(EventComponent.queryByText('Show Details')).toBeInTheDocument();
+      });
+
+     
+});
