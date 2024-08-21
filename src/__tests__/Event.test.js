@@ -32,7 +32,11 @@ describe('<Event /> component', () => {
 
       test('renders event location', () => {
         expect(EventComponent.queryByText(mockData[0].location)).toBeInTheDocument();
-      });     
+      });
+      
+      test('renders event start time', () =>{
+        expect(EventComponent.queryByText(mockData[0].created)).toBeInTheDocument();
+      });
 
       test('render events details button with title ("Show details")', () => {
         expect(EventComponent.queryByText('Show Details')).toBeInTheDocument();
