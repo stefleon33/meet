@@ -1,10 +1,16 @@
 // src/components/Event.js
 
-const Event = () => {
 import React from "react";
 
+const Event = ({event}) => {
     return (
-      <li></li>
+      <li className="event">
+        <span className="eventSummary">
+          <h2>{event.summary}</h2>
+          <p className="location">{event.location}</p>
+          <p className="originalStartTime">{event && (new Date(event.originalStartTime.dateTime)).toUTCString()}</p>
+        </span>
+      </li>
     );
   }
   
