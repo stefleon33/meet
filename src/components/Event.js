@@ -1,6 +1,6 @@
 // src/components/Event.js
 
-import React from "react";
+import React, { useState } from "react";
 
 const Event = ({event}) => {
     return (
