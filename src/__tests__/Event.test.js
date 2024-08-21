@@ -24,3 +24,7 @@ import '@testing-library/jest-dom/extend-expect';
         expect(EventComponent.queryByText(mockData[0].summary)).toBeInTheDocument();
       });
 
+      test('renders event location', () => {
+        expect(EventComponent.queryByText(mockData[0].location)).toBeInTheDocument();
+      });
+
