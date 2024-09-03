@@ -18,7 +18,7 @@ const App = () => {
 
   useEffect(() => {
     fetchData();
-  });
+  }, []);
 
  return (
    <div className="App">
