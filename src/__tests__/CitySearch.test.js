@@ -1,12 +1,16 @@
+/* eslint-disable testing-library/render-result-naming-convention */
+/* eslint-disable testing-library/no-node-access */
 /* eslint-disable testing-library/prefer-screen-queries */
 /* eslint-disable testing-library/no-render-in-setup */
 // src/__tests__/CitySearch.test.js
 
-import { render } from '@testing-library/react';
+import { render, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom/extend-expect';
 import CitySearch from '../components/CitySearch';
 import { extractLocations, getEvents } from '../api';
+import App from '../App';
+
 
 describe('<CitySearch /> component', () => {
   let CitySearchComponent;
