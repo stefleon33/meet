@@ -24,3 +24,7 @@ describe('<EventList /> component', () => {
         expect(EventListComponent.getAllByRole("listitem")).toHaveLength(allEvents.length);
       });
      });
+
+describe('<EventList /> integration', () => {
+
+});
