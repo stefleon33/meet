@@ -1,8 +1,11 @@
+/* eslint-disable testing-library/render-result-naming-convention */
 /* eslint-disable testing-library/no-node-access */
 /* eslint-disable testing-library/no-render-in-setup */
 // src/__tests__/App.test.js
 
-import { render } from '@testing-library/react';
+import { render, within } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { getEvents } from '../api';
 import App from '../App';
 
 describe('<App /> component', () => {
