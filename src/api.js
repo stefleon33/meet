@@ -37,6 +37,12 @@ export const getEvents = async () => {
     } else return null; 
   }
 };
+
+const getToken = async (code) => {
+  const encodeCode = encodeURIComponent(code);
+  const response = await fetch(
+    'https://4x2swxk0wi.execute-api.us-east-1.amazonaws.com/dev/api/token' + '/' + encodeCode
+  );
 };
 
 export const getAccessToken = async () => {
