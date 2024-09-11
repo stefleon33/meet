@@ -25,6 +25,18 @@ export const getEvents = async () => {
     return mockData;
   }
 
+  const token = await getAccessToken();
+
+  if (token) {
+    removeQuery();
+    const url =  "https://4x2swxk0wi.execute-api.us-east-1.amazonaws.com/dev/api/get-events" + "/" + token;
+    const response = await fetch(url);
+    const result = await response.json();
+    if (result) {
+      return result.events;
+    } else return null; 
+  }
+};
 };
 
 export const getAccessToken = async () => {
