@@ -86,3 +86,9 @@ input[type="number"] {
   outline: none;
   cursor: pointer;
 }
+
+/* nprogress.css */
+#nprogress .bar {
+  background: #29d;
+  height: 3px;
+}
