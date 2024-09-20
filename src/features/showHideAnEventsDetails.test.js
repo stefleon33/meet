@@ -1,46 +1,52 @@
 /* eslint-disable testing-library/no-node-access */
 import { loadFeature, defineFeature } from 'jest-cucumber';
+import { render, within, waitFor } from '@testing-library/react';
+import App from '../App';
+import { getEvents } from '../api';
+import userEvent from '@testing-library/user-event';
+
+
 const feature = loadFeature('./src/features/showHideAnEventsDetails.feature');
 
 defineFeature(feature, test => {
     test('An event element is collapsed by default.', ({ given, when, then }) => {
-        given('user sees all events for a city', () => {
+        given('user opens the app', () => {
 
         });
 
-        when('the user selects an event from the list', () => {
+        when('the list of events are rendered', () => {
 
         });
 
-        then('the event details should be displayed', () => {
+        then('the event details should not be shown', () => {
 
         });
     });
 
     test('User can expand an event to see details.', ({ given, when, then }) => {
-        given('user is on an event', () => {
+        given('user sees the events rendered', () => {
 
         });
 
-        when('user clicks a button to view more details for the event', () => {
+        when('user clicks the Show Details button to view a description for the event', () => {
 
         });
 
-        then('more information should be displayed for the event', () => {
+        then('event details should be displayed', () => {
 
         });
     });
 
     test('User can collapse an event to hide details.', ({ given, when, then }) => {
-        given('the user is viewing the details for the event', () => {
+        given('the user has clicked the Show Details button for the event', () => {
 
         });
 
-        when('the user wants to hide the event details', () => {
+        when('the user clicks the Hide Details button', () => {
 
         });
 
-        then('the event details should be hidden and the user should just see the initial event details', () => {
+        then('the event details should be hidden', () => {
 
         });
     });
