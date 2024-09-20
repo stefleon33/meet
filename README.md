@@ -38,21 +38,21 @@ Users will be able to use the app to find upcoming events in different cities. T
 
     SCENARIO 1: An event element is collapsed by default.
 
-        Given: user sees all events for a city;
-        When: the user selects an event from the list;
-        Then: the event details should be displayed.
+        Given: the user opens the app;
+        When: the list of events are rendered;
+        Then: the event details should not be shown.
 
     SCENARIO 2: User can expand an event to see details.
 
-        Given: user is on an event;
-        When: user clicks a button to view more details for the event;
-        Then: more information should be displayed for the event.
+        Given: user sees the events rendered;
+        When: user clicks the "Show Details" button to view a description for the event;
+        Then: event details should be displayed.
 
     SCENARIO 3: User can collapse an event to hide details.
 
-        Given: the user is viewing the details for the event;
-        When: the user wants to hide the event details;
-        Then: the event details should be hidden and the user should just see the initial event details.
+        Given: the user has clicked the "Show Details" button for the event;
+        When: the user clicks the "Hide Details" button;
+        Then: the event details should be hidden.
 
 ## Feature 3: Specify Number of Events
 
@@ -63,15 +63,17 @@ Users will be able to use the app to find upcoming events in different cities. T
 
     SCENARIO 1: When user hasn't specified a number, 32 events are shown by default.
 
-        Given: the user has selected a city;
-        When: they view the available events;
-        Then: their view should be set to show 32 events.
+        Given: the user opens the app;
+        And: the user has not specified the number of events to display
+        When: the user opens the event list;
+        Then: "32" events should be displayed.
 
     SCENARIO 2: User can change the number of events displayed.
 
-        Given: the user has selected a city and is on the events page;
-        When: the user wants to change the number of events displayed;
-        Then: they should be given options for what they can change their view to be.
+        Given: the user is on the events page;
+        And: the user has specified the number of events to display as "10"
+        When: the user changes the number of events to display to "10";
+        Then: "10" events should be displayed.
 
 ## Feature 4: Use the App When Offline
 
