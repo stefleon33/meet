@@ -4,22 +4,33 @@ import { render, within, waitFor } from '@testing-library/react';
 import App from '../App';
 import { getEvents } from '../api';
 import userEvent from '@testing-library/user-event';
-
+import Event from '../components/Event';
 
 const feature = loadFeature('./src/features/showHideAnEventsDetails.feature');
 
 defineFeature(feature, test => {
     test('An event element is collapsed by default.', ({ given, when, then }) => {
+        let AppComponent;
         given('user opens the app', () => {
-
+            AppComponent = render(<App />);
         });
 
-        when('the list of events are rendered', () => {
-
-        });
+        when('the list of events are rendered', async () => {
+            const AppDOM = AppComponent.container.firstChild;
+            const EventListDOM = AppDOM.querySelector('#event-list');
+      
+            await waitFor(() => {
+              const EventListItems = within(EventListDOM).queryAllByRole('listitem');
+              expect(EventListItems.length).toBe(32);
+            });
+      
+          });
 
         then('the event details should not be shown', () => {
-
+            const AppDOM = AppComponent.container.firstChild;
+            const eventDetails = AppDOM.querySelector('.details');
+            expect(eventDetails).not.toBeInTheDocument();
+            });
         });
     });
 
@@ -50,4 +61,3 @@ defineFeature(feature, test => {
 
         });
     });
-});
