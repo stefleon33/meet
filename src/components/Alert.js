@@ -41,3 +41,5 @@ class Alert extends Component {
       this.bgColor = 'rgb(220, 220, 255)'; // light blue
     }
   }
+  
+  export { InfoAlert };
