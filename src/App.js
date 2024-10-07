@@ -2,6 +2,7 @@
 // src/App.js
 
 import CitySearch from './components/CitySearch';
+import CityEventsChart from './components/CityEventsChart';
 import EventList from './components/EventList';
 import NumberOfEvents from './components/NumberOfEvents';
 import './App.css';
@@ -40,7 +41,6 @@ const App = () => {
 
  return ( 
    <div className="App">
-      <section className="header">
       <h1>Meet App</h1>
       <p>Find events in nearby cities</p>
      <div className="alerts-container">
@@ -55,8 +55,10 @@ const App = () => {
      <NumberOfEvents 
         setCurrentNOE={setCurrentNOE}
         setErrorAlert={setErrorAlert}/>
+      <CityEventsChart 
+        allLocations={allLocations} 
+        events={events} />
      <EventList events={events}/>
-     </section>
    </div>
  );
 }
