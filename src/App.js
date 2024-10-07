@@ -32,8 +32,11 @@ const App = () => {
     fetchData();
   }, [currentCity, currentNOE]);
 
- return (
+ return ( 
    <div className="App">
+      <section className="header">
+      <h1>Meet App</h1>
+      <p>Find events in nearby cities</p>
      <div className="alerts-container">
         {infoAlert.length ? <InfoAlert text={infoAlert}/> : null}
         {errorAlert.length ? <ErrorAlert text={errorAlert}/> : null}
@@ -46,6 +49,7 @@ const App = () => {
         setCurrentNOE={setCurrentNOE}
         setErrorAlert={setErrorAlert}/>
      <EventList events={events}/>
+     </section>
    </div>
  );
 }
