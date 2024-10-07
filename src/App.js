@@ -39,12 +39,12 @@ const App = () => {
         {errorAlert.length ? <ErrorAlert text={errorAlert}/> : null}
       </div>
      <CitySearch 
-      allLocations={allLocations} 
-      setCurrentCity={setCurrentCity} 
-      setInfoAlert={setInfoAlert} />
+        allLocations={allLocations} 
+        setCurrentCity={setCurrentCity} 
+        setInfoAlert={setInfoAlert} />
      <NumberOfEvents 
-     setCurrentNOE={setCurrentNOE}
-     setErrorAlert={setErrorAlert}/>
+        setCurrentNOE={setCurrentNOE}
+        setErrorAlert={setErrorAlert}/>
      <EventList events={events}/>
    </div>
  );
