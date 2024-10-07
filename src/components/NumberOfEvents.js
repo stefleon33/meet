@@ -2,12 +2,13 @@
 
 import { useState } from "react"
 
-const NumberOfEvents = ({ setCurrentNOE }) => {
+const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
     const [number, setNumber] = useState(32)
 
     const handleInputChanged = (e) => {
         let value = e.target.value
         setNumber(value)
+
         let errorText;
         if(value === isNaN || value.length <= 0) {
             errorText = 'Please enter a valid number'
@@ -15,6 +16,7 @@ const NumberOfEvents = ({ setCurrentNOE }) => {
             errorText = ''
         }
         setCurrentNOE(value)
+        setErrorAlert(errorText)
     }
     return (
         <div id="numberOfEvents">
