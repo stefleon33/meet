@@ -55,9 +55,13 @@ const App = () => {
      <NumberOfEvents 
         setCurrentNOE={setCurrentNOE}
         setErrorAlert={setErrorAlert}/>
+    <div className="charts-container">
+      <EventsGenreChart
+        events={events} />
       <CityEventsChart 
         allLocations={allLocations} 
         events={events} />
+    </div>
      <EventList events={events}/>
    </div>
  );
