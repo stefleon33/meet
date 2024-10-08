@@ -3,6 +3,7 @@
 
 import CitySearch from './components/CitySearch';
 import CityEventsChart from './components/CityEventsChart';
+import EventsGenreChart from './components/EventGenresChart';
 import EventList from './components/EventList';
 import NumberOfEvents from './components/NumberOfEvents';
 import './App.css';
