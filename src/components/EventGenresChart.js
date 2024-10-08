@@ -13,7 +13,7 @@ import {
 const EventsGenreChart = ({ events }) => {
   const [data, setData] = useState([]);
   const genres = ['React', 'JavaScript', 'Node', 'jQuery', 'AngularJS'];
-  const colors = ['#008B8B', '#FF7F50', '#00BFFF', '#9932CC', '#8FBC8F'];
+  const colors = ['#008B8B', '#FF7F50', '#00BFFF', '#9932CC', '#FFB6C1'];
 
   useEffect(() => {
     setData(getData());
