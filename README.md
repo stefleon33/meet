@@ -1,8 +1,19 @@
-# meet
+# Meet - Event Discovery App
 
-The meet app is a serverless, PWA with React that uses a TDD technique. The app will use the Google Calendar API to fetch upcoming events.
+Meet is a React-based event discovery app that allows users to browse and explore upcoming events across various cities. The app is designed for a seamless user experience, offering features like filtering events by city, showing or hiding event details, and specifying the number of events displayed. Meet supports offline access, providing cached event data when the user is not connected to the internet. Additionally, the app can be installed as a shortcut on the home screen, and it includes visual data representations through charts that help users make informed decisions about their event attendance.
 
-Users will be able to use the app to find upcoming events in different cities. They will be able to select city they want to view events in, the number of events they view, select to see more information about an event and charts to help visualize the event details. The app will be availble offline and a shortcut will be able to be added to the user's homescreen.
+## Tech Stack
+
+- Serverless
+- Google Calendar API
+- React
+- Jest
+- Puppeteer
+- Recharts
+
+## Live Link
+
+[View Meet Online](https://stefleon33.github.io/meet/)
 
 ## Feature 1: Filter events by city
 
@@ -119,3 +130,51 @@ Users will be able to use the app to find upcoming events in different cities. T
         Given: a user is viewing the events page;
         When: they navigate to the chart section;
         Then: they should view a chart with the number of upcoming events in each city.
+
+## Development and Deployment
+
+### CI/CD Practices
+
+The development process for Meet utilizes CI/CD (Continuous Integration and Continuous Delivery) practices to ensure the app is always in a deployable state. Automated tests run frequently to catch issues early, and deployment to the production environment is streamlined for quick and reliable updates.
+
+### Key Technologies Used
+
+- **React**: For building the user interface.
+- **Bootstrap**: For responsive design and UI components.
+- **PWA Support**: To allow the app to be installed as a shortcut on mobile devices.
+- **Jest and Puppeteer**: For automated testing and end-to-end test coverage.
+
+## Installation and Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/mayyinandprojects/meet.git
+
+   ```
+
+2. Navigate into the project directory:
+
+   ```bash
+   cd meet
+
+   ```
+
+3. Run the app:
+   ```bash
+   npm start
+   ```
+
+## Testing
+
+1. Unit and Integration Tests: Run using Jest.
+
+   ```bash
+   npm run test
+
+   ```
+
+2. End-to-End Tests: Run using Puppeteer (Switch headless mode to true in EndtoEnd.tests.js).
+   ```bash
+   npm run test
+   ```
